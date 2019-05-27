@@ -8,8 +8,7 @@
 \item{Pokedex Number}{The number of the Pokemon in the Pokedex}
 \item{Name}{Name of the Pokemon}
 \item{Type.1}{The type of the Pokemon}
-\item{Type.2}{If applicable, second type of the Pokemon.  Pokemon that have only one
-              type a "None" entry in this column}
+\item{Type.2}{If applicable, second type of the Pokemon.  Pokemon that have only one type have "None" entry in this column}
 \item{Total}{Total number of stats points the Pokemon holds}
 \item{HP}{Number of Hit Points (health) of the Pokemon}
 \item{Attack}{Number of attack points}
