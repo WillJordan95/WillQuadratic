@@ -1,0 +1,19 @@
+Package: WillQuadratic
+Title: Finds roots of a given quadratic
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "William",
+           family = "Jordan",
+           role = c("aut", "cre"),
+           email = "william.jordan@student.adelaide.edu.au")
+Description: Takes the coefficients of the square, linear and constant term in a 
+              quadratice and implements the quadratic formula to find the roots.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 2.1.0)
+VignetteBuilder: knitr

@@ -1,0 +1,112 @@
+---
+title: "My_Quadratic_Formula"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{My_Quadratic_Formula}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Loading the package
+
+```{r setup}
+library(WillQuadratic)
+```
+
+## Using the `quadratic_formula()` function
+
+The `quadratic_formula()` function finds the roots of a quadratic in the form
+
+$$
+ax^2 + bx + c = 0
+$$
+by taking the coefficients \(a,b,c\) as inputs and applying the quadratic formula
+
+$$
+x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+$$
+
+If the quadratic has one repeated root, the function returns a numeric with that value.  If the quadratic has distint, real roots, the function returns a vector of numerics containing the solutions.  If the quadratic has non-real roots, the vector of solutions contains objects of class complex.
+
+\vspace{1cm}
+
+## Example 1 - Repeated root
+
+Consider the quadratic
+
+$$
+x^2 - 10x + 25 = 0
+$$
+That is, \(a=1,b=-10,c=25\), we would expect
+
+$$
+\begin{aligned}
+x = \frac{10 \pm \sqrt{(-10)^2 - 4(25)}}{2} \\[1em]
+= \frac{10 \pm \sqrt{100 - 100}}{2} \\[1em]
+= 5
+\end{aligned}
+$$
+Hence, using `quadratic_formula()` we have
+
+```{r}
+quadratic_formula(1, -10, 25)
+```
+
+\vspace{1cm}
+
+## Example 2 - Distinct, real roots
+
+Consider the quadratic 
+
+$$
+2x^2 - 10x + 12 = 0 
+$$
+That is, \(a=2, b=-10, c=12\), we would expect
+
+$$
+\begin{aligned}
+x = \frac{10 \pm \sqrt{(-10)^2 - 4(2)(12)}}{2(2)} \\[1em]
+= \frac{10 \pm \sqrt{100 - 96}}{4} \\[1em]
+= \frac{10 \pm 2}{4} \\[1em]
+= 2,3
+\end{aligned}
+$$
+Hence, using `quadratic_formula()` we have
+
+```{r}
+quadratic_formula(2, -10, 12)
+```
+
+
+## Example 3 - Non-real roots
+
+Consider the quadratic
+
+$$
+x^2 - 2x + 2 = 0
+$$
+That is, \(a=1, b=-2, c=2\), we would expect
+
+$$
+\begin{aligned}
+x = \frac{2 \pm \sqrt{(-2)^2 - 4(2)}}{2} \\[1em]
+= \frac{2 \pm \sqrt{4 - 8}}{2} \\[1em]
+= \frac{2 \pm \sqrt{-4}}{2} \\[1em]
+= 1 \pm \sqrt{-1} \\[1em]
+= 1 + i, 1-i
+\end{aligned}
+$$
+Hence, using `quadratic_formula()` we have
+
+```{r}
+x <- quadratic_formula(1, -2, 2)
+x
+class(x)
+```
