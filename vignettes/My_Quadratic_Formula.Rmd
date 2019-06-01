@@ -20,6 +20,9 @@ knitr::opts_chunk$set(
 library(WillQuadratic)
 ```
 
+This package contains a function, `quadratic_formula()`, that can be used to find roots of a quadratic for given coefficients.  It also contains a dataset, 'Pokemon'.  This dataset containts summary statistics for Pokemon, generations 1-6.  This dataset was found on Kaggle.  More information can be found on this dataset [here](https://www.kaggle.com/abcsds/pokemon). 
+
+
 ## Using the `quadratic_formula()` function
 
 The `quadratic_formula()` function finds the roots of a quadratic in the form

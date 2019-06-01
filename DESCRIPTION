@@ -6,7 +6,7 @@ Authors@R:
            family = "Jordan",
            role = c("aut", "cre"),
            email = "william.jordan@student.adelaide.edu.au")
-Description: Takes the coefficients of the square, linear and constant term in a quadratic and implements the quadratic formula to find the roots.
+Description: Conntains a function, quadratic_formula.R, that takes the coefficients of the square, linear and constant term in a quadratic and implements the quadratic formula to find the roots.  Also contains the 'Pokemon' dataset, which contains summary statistics for Pokemon generations 1-6.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
